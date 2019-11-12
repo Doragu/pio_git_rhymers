@@ -1,0 +1,4 @@
+#Ignoruj folder .idea i jego zawartosc
+/.idea
+#Ignoruj folder target i jego zawartosc
+/target
