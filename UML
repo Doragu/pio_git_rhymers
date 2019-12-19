@@ -1,0 +1,7 @@
+[RhymersFactory]<-[DefaultRhymersFactory]
+[IntLinkedList]1<>-1[Node]
+[DefaultCountingOutRhymer]<-[FIFORhymer]
+[DefaultCountingOutRhymer]<-[HanoiRhymer]
+[RhymersDemo]1<>-1[RhymersFactory]
+[RhymersDemo]1<>-*[DefaultCountingOutRhymer]
+[RhymerJUnitTest]1<>-*[DefaultCountingOutRhymer]
