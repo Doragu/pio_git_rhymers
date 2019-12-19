@@ -1,9 +1,9 @@
 package edu.kis.vh.nursery.list;
 
+//TODO: Reconsider if file class is needed, and maybe delete it.
 public class IntLinkedList {
 
 	private Node last;
-	private int i;
 
 	private final int EMPTY = -1;
 

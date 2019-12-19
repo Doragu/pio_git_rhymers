@@ -9,7 +9,6 @@ class RhymersDemo {
 		RhymersFactory factory = new DefaultRhymersFactory();
 
 		testRhymers(factory);
-
 	}
 
 	private static void testRhymers(RhymersFactory factory) {

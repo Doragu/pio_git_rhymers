@@ -2,6 +2,7 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
+	//TODO: Make this values protected or private
 	public static final int EMPTY  = -1;
 	public static final int IF_EMPTY   = -1;
 	public static final int MAX_SIZE = 12;
@@ -19,6 +20,7 @@ public class DefaultCountingOutRhymer {
 		return total;
 	}
 
+	//TODO: Rename this method, because name doesn't say what method does.
 	public boolean callCheck() {
 		return total == EMPTY;
 	}
@@ -26,7 +28,8 @@ public class DefaultCountingOutRhymer {
 	public boolean isFull() {
 		return total == MAX_SIZE - 1 ;
 	}
-		
+
+	//TODO: Rename this method, because name doesn't say what method does.
 	protected int peekaboo() {
 		if (callCheck())
 			return IF_EMPTY;
