@@ -20,7 +20,6 @@ public class DefaultCountingOutRhymer {
 		return total;
 	}
 
-	//TODO: Rename this method, because name doesn't say what method does.
 	public boolean callCheck() {
 		return total == EMPTY;
 	}
