@@ -44,7 +44,7 @@ public class RhymersJUnitTest {
 			rhymer.countIn(TEST_VALUE);
 		}
 
-		Assert.assertEquals(true, rhymer.isFull());
+		Assert.assertEquals(false, rhymer.isFull());
 	}
 
 	@Test
