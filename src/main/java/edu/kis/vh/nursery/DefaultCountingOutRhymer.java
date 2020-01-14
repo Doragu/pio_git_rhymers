@@ -2,43 +2,35 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-	//TODO: Make this values protected or private
-	private static final int EMPTY  = -1;
-	private static final int IF_EMPTY   = -1;
-	private static final int MAX_SIZE = 12;
+	private IntArrayStack stack = new IntArrayStack();
 
-	private final int[] numbers = new int[MAX_SIZE];
+	public DefaultCountingOutRhymer() {  }
 
-	private int total = EMPTY;
+	public DefaultCountingOutRhymer(IntArrayStack stack) {
+		this.stack = stack;
+	}
 
 	public void countIn(int in) {
-		if (!isFull())
-			numbers[++total] = in;
+		stack.countIn(in);
 	}
 
 	public int getTotal() {
-		return total;
+		return stack.getTotal();
 	}
 
 	public boolean callCheck() {
-		return total == EMPTY;
+		return stack.callCheck();
 	}
-		
+
 	public boolean isFull() {
-		return total == MAX_SIZE - 1 ;
+		return stack.isFull();
 	}
 
-	//TODO: Rename this method, because name doesn't say what method does.
-	protected int peekaboo() {
-		if (callCheck())
-			return IF_EMPTY;
-		return numbers[total];
+	public int peekaboo() {
+		return stack.peekaboo();
 	}
-			
+
 	public int countOut() {
-		if (callCheck())
-			return IF_EMPTY;
-		return numbers[total--];
+		return stack.countOut();
 	}
-
 }
