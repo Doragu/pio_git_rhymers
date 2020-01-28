@@ -1,13 +1,13 @@
-package edu.kis.vh.nursery.list;
+package edu.kis.vh.nursery.collections;
 
 //TODO: Reconsider if file class is needed, and maybe delete it.
-public class IntLinkedList {
+public class IntLinkedList implements IntCollection {
 
 	private Node last;
 
-	private final int EMPTY = -1;
 	private int total = 0;
 
+	@Override
 	public void push(int i) {
 		if (last == null)
 			last = new Node(i);
@@ -19,24 +19,29 @@ public class IntLinkedList {
 		total++;
 	}
 
+	@Override
 	public boolean isEmpty() {
 		return last == null;
 	}
 
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 
+	@Override
 	public int top() {
 		if (isEmpty())
 			return EMPTY;
 		return last.getValue();
 	}
 
+	@Override
 	public int getTotal() {
 		return total;
 	}
 
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return EMPTY;
